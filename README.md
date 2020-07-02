@@ -1,10 +1,10 @@
-﻿# react-server-template
+﻿# vue-server-template
 
-> react+express单页应用开发脚手架
+> vue+express单页应用开发脚手架
 
 ## 技术栈
 
-webpack4 + Es6 + react + express
+webpack4 + Es6 + vue + express
 
 ## 运行
 
@@ -45,7 +45,7 @@ npm run build
 #使用pm2运行工程
 npm run start-project
 
-#线上运行工程（先install）
+#线上运行工程
 npm start
 
 ```
@@ -66,24 +66,19 @@ npm start
   │   │  ├── stores               // mobx store，状态管理
   │   │  ├── tool                 // 通用公共函数
   │   │  ├── index.html           // html模板
-  │   │  ├── index.tsx            // 入口
+  │   │  ├── main.js              // 入口
   │   ├── server                  // server 源代码
-  │   │  ├── app.ts               // pro环境下的server 入口
-  │   │  ├── devApp.ts            // dev环境下的server 入口
-  │   │  └── route.ts             // express路由中间件配置
+  │   │  ├── app.js               // pro环境下的server 入口
+  │   │  ├── devApp.js            // dev环境下的server 入口
+  │   │  └── route.js             // express路由中间件配置
   ├── static                      // 静态文件目录
   ├── babele.config.js            // babel-loader 配置
-  ├── config.js                   // 工程全局公共配置（port、host等）
+  ├── config                      // 工程全局公共配置（port、host等）
   ├── postcss.config.js           // postcss-loader 配置
   ├── .editorconfig               // 编辑器配置
   ├── .gitignore                  // git 忽略项
-  ├── .prettierignore             // prettier 忽略项
-  ├── .prettierrc                 // prettier 配置
   ├── package-lock.json           // npm 锁文件
   ├── package.json                // npm 配置
   ├── pm2.json                    // pm2 入口
   ├── README.md                   // README 文档
-  ├── tsconfig-server.json        // tsconfig-server 配置
-  ├── tsconfig.json               // tsconfig 配置
-  └── tslint.json                 // tslint 配置
 ```
