@@ -1,0 +1,13 @@
+{
+  "apps": [
+    {
+      "exec_mode": "fork",
+      "script": "./src/server/app.js",
+      "name": "vue-server-template",
+      "error_file": "./logs/vue-server-template.err.log",
+      "out_file": "./logs/vue-server-template.out.log",
+      "merge_logs": true,
+      "log_date_format" : "YYYY/MM/DD HH:mm Z"
+    }
+  ]
+}
