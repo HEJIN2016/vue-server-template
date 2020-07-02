@@ -29,6 +29,10 @@
   "dependencies": {
     "cross-env": "^7.0.2",
     "express": "^4.17.1",
+    "express-jwt": "^5.3.3",
+    "express-validator": "^6.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "mysql": "^2.18.1",
     "pm2": "^4.4.0",
     "vue": "^2.6.11",
     "vue-router": "^3.3.4",
@@ -46,11 +50,14 @@
     "axios": "^0.19.2",
     "babel-loader": "^8.1.0",
     "babel-polyfill": "^6.26.0",
+    "body-parser": "^1.19.0",
+    "boom": "^7.3.0",
     "cache-loader": "^4.1.0",
     "clean-webpack-plugin": "^3.0.0",
     "compression": "^1.7.4",
     "cookie-parser": "^1.4.5",
     "copy-webpack-plugin": "^6.0.3",
+    "crypto": "^1.0.1",
     "css-loader": "^3.6.0",
     "cssnano": "^4.1.10",
     "file-loader": "^6.0.0",
@@ -73,6 +80,7 @@
     "view-design": "^4.3.0-rc.1",
     "vue-loader": "^15.9.3",
     "vue-style-loader": "^4.1.2",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.11",
+    "vuex-persistedstate": "^3.0.1"
   }
 }

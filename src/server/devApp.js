@@ -1,12 +1,13 @@
 /*
  * @Author: hejin
  */
+const bodyParser = require('body-parser'); // 引入body-parser模块
 const cookieParser = require('cookie-parser')
 const webpack = require('webpack')
 const WebpackDevServer = require('webpack-dev-server')
 const webpackConfig = require('../../build/webpack.client')
 const config = require('../../config/index.js')
-const route = require('./route')
+const route = require('./routes/index.js')
 const { data } = require('./mock')
 
 const compiler = webpack(webpackConfig)
@@ -23,6 +24,9 @@ const app = new WebpackDevServer(compiler, {
   proxy: {},
 
   before(app) {
+    app.use(bodyParser.json()); // 解析json数据格式
+    app.use(bodyParser.urlencoded({extended: true})); // 解析form表单提交的数据application/x-www-form-urlencoded
+
     app.use(cookieParser())
     /**
      * root 路径路由，校验token和system

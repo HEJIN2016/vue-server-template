@@ -1,14 +1,18 @@
 /*
  * @Author: hejin
  */
+const bodyParser = require('body-parser'); // 引入body-parser模块
 const path = require('path')
 const express = require('express')
 const cookieParser = require('cookie-parser')
 const compression = require('compression')
 const config = require('../../config/index.js')
-const route = require('./route')
+const route = require('./routes/index.js')
 
 const app = express()
+
+app.use(bodyParser.json()); // 解析json数据格式
+app.use(bodyParser.urlencoded({extended: true})); // 解析form表单提交的数据application/x-www-form-urlencoded
 
 app.use(compression())
 app.use(cookieParser())
