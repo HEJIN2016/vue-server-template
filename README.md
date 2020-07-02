@@ -19,7 +19,7 @@ npm run dev
 npm start
 
 #访问地址
-http://localhost:3000
+http://localhost:3200
 ```
 
 ## npm脚本介绍
