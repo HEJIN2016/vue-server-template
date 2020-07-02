@@ -1,6 +1,7 @@
 /*
  * @Author: hejin
- */ 
+ * webpack DllPlugin打包公共文件（babel-polyfill和vue系列包）
+ */
 const path = require('path')
 const webpack = require('webpack')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')

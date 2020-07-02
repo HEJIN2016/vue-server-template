@@ -36,9 +36,6 @@ npm run dev
 #打包客户端
 npm run build-client
 
-#本地服务端
-npm run build-server
-
 #client-server打包
 npm run build
 
