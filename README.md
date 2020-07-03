@@ -1,6 +1,10 @@
 ﻿# vue-server-template
 
-> vue+express单页应用开发脚手架
+> vue+express+webpack单页应用开发脚手架，包含vue客户端和express服务端
+webpack优化点：
+1.引入happypack，实现webpack多线程打包，显著提高本地打包速度
+2.引入webpack DllReferencePlugin，提前打包公共代码（polyfill和vue全家桶）
+3.可自我根据需要自定义调整webpack配置
 
 ## 技术栈
 
