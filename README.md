@@ -4,9 +4,15 @@
 git地址：[vue+express+webpack](https://github.com/HEJIN2016/vue-server-template)，求star
 
 ### webpack优化点
-1.引入happypack，实现webpack多线程打包，显著提高本地打包速度
-2.引入webpack DllReferencePlugin，提前打包公共代码（polyfill和vue全家桶）
-3.可自我根据需要自定义调整webpack配置
+1.引入happypack，实现webpack多线程打包，显著提高本地打包速度；
+
+2.引入webpack DllReferencePlugin，提前打包公共代码（polyfill和vue全家桶），提高构建速度；
+
+3.支持less、sass，支持postcss配置，自动引入polyfill（可删除）；
+
+3.可自我根据需要自定义调整webpack配置；
+
+4.一经运行，即可同时运行客户端和服务端，并针对dev和prod环境做区分。dev环境使用webpack devServer中的express插槽，prod环境使用express static映射前端静态文件
 
 
 
