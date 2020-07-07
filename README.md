@@ -74,7 +74,7 @@ npm start
   │   │  ├── components           // 公用组件
   │   │  ├── layout               // 布局组件
   │   │  ├── views                // 页面路由组件
-  │   │  ├── stores               // mobx store，状态管理
+  │   │  ├── stores               // store，状态管理
   │   │  ├── tool                 // 通用公共函数
   │   │  ├── index.html           // html模板
   │   │  ├── main.js              // 入口
