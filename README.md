@@ -1,4 +1,4 @@
-﻿# vue-server-template
+# vue-server-template
 
 > vue+express+webpack单页应用开发脚手架，包含vue客户端和express服务端
 git地址：[vue+express+webpack](https://github.com/HEJIN2016/vue-server-template)，求star
@@ -10,7 +10,7 @@ git地址：[vue+express+webpack](https://github.com/HEJIN2016/vue-server-templa
 
 3.支持less、sass，支持postcss配置，自动引入polyfill（可删除）；
 
-3.可自我根据需要自定义调整webpack配置；
+3.手动搭建webpack脚手架，脱离vue-cli，可自我根据需要自定义调整webpack配置；
 
 4.一经运行，即可同时运行客户端和服务端，并针对dev和prod环境做区分。dev环境使用webpack devServer中的express插槽，prod环境使用express static映射前端静态文件
 
@@ -23,8 +23,16 @@ webpack4 + Es6 + vue + express
 ### 运行
 
 ```
+#下载工程
+git clone https://github.com/HEJIN2016/vue-server-template
+
+cd vue-server-template
+
 #安装依赖
 npm install
+
+#打包lib
+npm run postinstall
 
 #本地开发
 npm run dev
@@ -51,7 +59,7 @@ npm run dev
 npm run build-client
 
 #client-server打包
-npm run build
+npm run build-server
 
 #使用pm2运行工程
 npm run start-project
@@ -74,7 +82,7 @@ npm start
   │   │  ├── components           // 公用组件
   │   │  ├── layout               // 布局组件
   │   │  ├── views                // 页面路由组件
-  │   │  ├── stores               // mobx store，状态管理
+  │   │  ├── stores               //  store，状态管理
   │   │  ├── tool                 // 通用公共函数
   │   │  ├── index.html           // html模板
   │   │  ├── main.js              // 入口
