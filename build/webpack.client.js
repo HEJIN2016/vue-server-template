@@ -1,3 +1,7 @@
+/*
+ * @Author: hejin
+ * 客户端webpack打包配置
+ */
 const webpack = require('webpack')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')

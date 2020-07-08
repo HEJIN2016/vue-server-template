@@ -6,7 +6,7 @@
   "scripts": {
     "postinstall": "npm run build-lib",
     "build-lib": "webpack -p --progress --profile --colors --config ./build/webpack.dll.js",
-    "dev": "cross-env NET_ENV=development node src/server/devApp",
+    "dev": "cross-env NET_ENV=development nodemon src/server/devApp",
     "build-client": "cross-env NET_ENV=production webpack -p --progress --profile --colors --config ./build/webpack.client.js ",
     "build": "npm install && npm run build-client",
     "start-project": "pm2 delete pm2.json && cross-env NET_ENV=production pm2 start pm2.json",
@@ -33,6 +33,7 @@
     "express-validator": "^6.6.0",
     "jsonwebtoken": "^8.5.1",
     "mysql": "^2.18.1",
+    "nodemon": "^2.0.4",
     "pm2": "^4.4.0",
     "vue": "^2.6.11",
     "vue-router": "^3.3.4",

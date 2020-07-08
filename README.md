@@ -1,16 +1,38 @@
-﻿# vue-server-template
+# vue-server-template
 
-> vue+express单页应用开发脚手架
+> vue+express+webpack单页应用开发脚手架，包含vue客户端和express服务端
+git地址：[vue+express+webpack](https://github.com/HEJIN2016/vue-server-template)，求star
 
-## 技术栈
+### webpack优化点
+1.引入happypack，实现webpack多线程打包，显著提高本地打包速度；
+
+2.引入webpack DllReferencePlugin，提前打包公共代码（polyfill和vue全家桶），提高构建速度；
+
+3.支持less、sass，支持postcss配置，自动引入polyfill（可删除）；
+
+3.手动搭建webpack脚手架，脱离vue-cli，可自我根据需要自定义调整webpack配置；
+
+4.一经运行，即可同时运行客户端和服务端，并针对dev和prod环境做区分。dev环境使用webpack devServer中的express插槽，prod环境使用express static映射前端静态文件
+
+
+
+### 技术栈
 
 webpack4 + Es6 + vue + express
 
-## 运行
+### 运行
 
 ```
+#下载工程
+git clone https://github.com/HEJIN2016/vue-server-template
+
+cd vue-server-template
+
 #安装依赖
 npm install
+
+#打包lib
+npm run postinstall
 
 #本地开发
 npm run dev
@@ -22,7 +44,7 @@ npm start
 http://localhost:3200
 ```
 
-## npm脚本介绍
+### npm脚本介绍
 ```
 #打包lib（npm install时自动调用该钩子）
 npm run postinstall
@@ -36,11 +58,8 @@ npm run dev
 #打包客户端
 npm run build-client
 
-#本地服务端
-npm run build-server
-
 #client-server打包
-npm run build
+npm run build-server
 
 #使用pm2运行工程
 npm run start-project
@@ -50,7 +69,7 @@ npm start
 
 ```
 
-## 目录结构
+### 目录结构
 ```txt
   ├── build                       // webpack配置
   │   ├── webpack.client.js       // webpack client端打包配置
@@ -63,7 +82,7 @@ npm start
   │   │  ├── components           // 公用组件
   │   │  ├── layout               // 布局组件
   │   │  ├── views                // 页面路由组件
-  │   │  ├── stores               // mobx store，状态管理
+  │   │  ├── stores               //  store，状态管理
   │   │  ├── tool                 // 通用公共函数
   │   │  ├── index.html           // html模板
   │   │  ├── main.js              // 入口
