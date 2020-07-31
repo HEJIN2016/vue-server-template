@@ -6,7 +6,7 @@ git地址：[vue+express+webpack](https://github.com/HEJIN2016/vue-server-templa
 ### webpack优化点
 1.引入happypack，实现webpack多线程打包，显著提高本地打包速度；
 
-2.引入webpack DllReferencePlugin，提前打包公共代码（polyfill和vue全家桶），提高构建速度；
+2.引入webpack DllReferencePlugin，提前打包公共代码（polyfill和vue全家桶，可配置），提高构建速度；
 
 3.支持less、sass，支持postcss配置，自动引入polyfill（可删除）；
 
